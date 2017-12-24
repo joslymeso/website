@@ -1,0 +1,212 @@
+body {
+    background-color: white;
+    background-image: url("img/backgroundimage.png");
+    background-repeat: repeat-x;
+    color: white;
+    text-align: center;
+}
+            
+.container {
+    margin: 50px;
+}
+        
+.mainbar {
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    background-color: black;
+    justify-content: space-between;
+}
+        
+header {
+    margin-left: 50px;
+}
+
+h1 {
+    position: relative;
+}
+
+.anime {
+    animation: animatie 3s ease-out -1.5s;
+}
+        
+nav {
+    align-self: center;
+    margin-right: 25px;
+}
+        
+.menu {
+    display: flex;
+    flex-flow: row;
+}
+        
+.menu>a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+        
+.menu>a:hover, section>a:hover {
+    color:#cccccc;
+}
+        
+#language {
+    margin-left: 75px;
+}
+        
+main {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+        
+aside {
+    width: 30%;
+    background-color: black;
+    overflow: auto;
+}
+        
+div>a {
+    color:blue;
+}
+        
+#googlemaps {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+        
+.submain {
+    display: flex;
+    flex-flow: column;
+    width:70%;
+    background-color: black;
+    margin-left: 10px;
+}
+        
+div>section {
+    height:50%;
+    padding: 35px;
+    text-align: justify;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+section>a {
+    color: white;
+    text-decoration: none;
+}
+        
+figure {
+    height:50%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    overflow: auto;
+}
+
+img {
+    height: 175px;
+    transition: height 1.5s;
+}
+
+img:hover {
+    height: 190px;
+}
+
+main>section {
+    width:70%;
+    background-color: black;
+    padding: 35px;
+    text-align: justify;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+        
+textarea {
+    resize: none;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    margin-top: 10px;
+    padding: 1px;
+}
+        
+@media screen and (max-width:700px) {
+    .container      {margin:0px}
+    .mainbar        {flex-flow:column}
+    header          {text-align:center;margin-left:0px}
+    nav             {margin-top:10px;width:100%;margin-right:0px}
+    .menu           {display:flex;flex-flow:column;justify-content:center;margin-right:0px;border:solid white 1.5px;box-sizing:border-box}
+    /** De overlappende borders bij '.menu' en '.menu>a' werden met opzet zo geschrveven **/
+    .menu>a         {border:solid white 1.5px;display:inline-block;width:100%;padding:7px;box-sizing:border-box;background-color:grey}
+    .menu>a:hover   {background-color:aliceblue}
+    #language       {margin-left:0px;border-bottom:solid white 1.5px}
+    main            {flex-flow:column}
+    .submain        {order:1;width:100%;margin-left:0px}
+    aside           {order:2;width:100%;margin-top:10px}
+    figure          {display:flex;flex-flow:column;justify-content:center;align-content:space-around}
+    main>section    {width:100%;margin-left:0px}
+    form            {display:flex;flex-flow:column;justify-content:center;align-content:space-around}
+    animation_box   {animation: none}
+}
+
+@keyframes animatie {
+    0%      {left:300px}
+    100%    {left:0px}
+}
+
+iframe {
+    border: 0px;
+}
+
+form {
+    border: 1px solid white;
+    padding: 15px;
+}
+
+.start_container {
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+    top:350px;
+    align-items: center;
+    width: 100%;
+}
+        
+.start_container>p {
+    opacity: 0;
+    animation: animation3 1.5s linear 5s forwards;
+}
+        
+.start_container>div {
+    height: 10px;
+    width: 0px;
+    background-color: black;
+    animation: animation2 5s ease-in-out 0s forwards;
+}
+        
+.start_container>span>a {
+    color: blue;
+    margin-left: 30px;
+    margin-right: 30px;
+    opacity: 0;
+    animation: animation3 1s linear 7s forwards;
+}
+        
+.start_container>span>a:active {
+    color: purple
+}
+        
+@keyframes animation2 {
+    from    {width:0px}
+    to      {width:100px}
+}
+        
+@keyframes animation3 {
+    from    {opacity:0}
+    to      {opacity:100}
+}
